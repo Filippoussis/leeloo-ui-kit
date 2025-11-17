@@ -1,1 +1,1 @@
-export { SentenceBuilder } from './exercises/SentenceBuilder';
+export { SentenceBuilder } from './SentenceBuilder';

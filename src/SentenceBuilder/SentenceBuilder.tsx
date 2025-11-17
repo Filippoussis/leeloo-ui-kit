@@ -14,11 +14,17 @@ import type { WordItem } from './types';
 import { WordPreview } from './WordPreview';
 import { SortableWord } from './SortableWord';
 
-export const SentenceBuilder: React.FC<{
+type SentenceBuilderProps = {
   initialWords: WordItem[];
   correctSentence: string;
   onComplete?: (isCorrect: boolean) => void;
-}> = ({ initialWords, correctSentence, onComplete }) => {
+};
+
+export const SentenceBuilder: React.FC<SentenceBuilderProps> = ({
+  initialWords,
+  correctSentence,
+  onComplete,
+}) => {
   const [words, setWords] = useState<WordItem[]>(initialWords);
   const [activeId, setActiveId] = useState<string | null>(null);
 
