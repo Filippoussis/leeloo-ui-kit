@@ -1,0 +1,1 @@
+export { SortableWord } from './SortableWord';
