@@ -1,31 +1,44 @@
 {
   "compilerOptions": {
+    /* Базовые настройки JavaScript */
     "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "types": ["vite/client"],
-    "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* Модульная система */
+    "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": false,
-    "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "noEmit": false,
+    "allowImportingTsExtensions": false,
+
+    /* Совместимость и консистентность */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "types": ["vite/client"],
+
+    /* JSX для React */
     "jsx": "react-jsx",
+
+    /* Генерация деклараций типов */
     "declaration": true,
     "declarationMap": true,
     "outDir": "dist",
-    "emitDeclarationOnly": false,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
 
-    /* Linting */
+    /* Строгая проверка типов */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "erasableSyntaxOnly": true,
+
+    /* Дополнительные рекомендации */
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
   "exclude": ["dist", "node_modules", "**/*.stories.tsx", "**/*.test.tsx"]

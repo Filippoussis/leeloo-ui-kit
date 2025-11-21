@@ -7,8 +7,6 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
   plugins: [
     dts({
-      include: ['src/**/*'],
-      exclude: ['**/*.stories.tsx', '**/*.test.tsx'],
       insertTypesEntry: true,
       rollupTypes: false,
     }),
@@ -24,5 +22,6 @@ export default defineConfig({
     rollupOptions: {
       external: ['react', 'react-dom'],
     },
+    emptyOutDir: true,
   },
 });
